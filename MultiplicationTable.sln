@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{732DCDFA-F5AE-48B0-BC3C-700223239E5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable.Tests", "MultiplicationTable.Tests\MultiplicationTable.Tests.csproj", "{1B72F149-F2D2-456E-B80A-03F36F73174E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{732DCDFA-F5AE-48B0-BC3C-700223239E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732DCDFA-F5AE-48B0-BC3C-700223239E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732DCDFA-F5AE-48B0-BC3C-700223239E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732DCDFA-F5AE-48B0-BC3C-700223239E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B72F149-F2D2-456E-B80A-03F36F73174E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B72F149-F2D2-456E-B80A-03F36F73174E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B72F149-F2D2-456E-B80A-03F36F73174E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B72F149-F2D2-456E-B80A-03F36F73174E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
