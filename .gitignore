@@ -6,7 +6,6 @@
 [Bb]in/
 packages/
 TestResults/
-MultiplicationTable.Tests/
 
 # globs
 Makefile.in
