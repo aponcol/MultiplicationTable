@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="global.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
