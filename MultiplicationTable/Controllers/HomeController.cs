@@ -11,14 +11,16 @@ namespace MultiplicationTable.Controllers
 {
     public class HomeController : Controller
     {
-        public enum MatrixBase { Decimal = 1, Binary, Hexadecimal };
-
-        public ActionResult Index(string matrix_size = "10", string matrix_base = "Decimal")
+        public ActionResult Index(string matrix_size = "10", string matrix_base = "1")
         {
             int matrixSize = int.Parse(matrix_size);
             TableGenerator tableGenerator = new TableGenerator();
             int[,] table = tableGenerator.GetTable(matrixSize);
             ViewBag.Table = table;
+            ViewBag.CurrentMatrixSize = matrixSize;
+            ViewBag.CurrentMatrixBase = matrix_base;
+            ViewBag.IsBinary = matrix_base == "2";
+            ViewBag.IsHex = matrix_base == "3";
             return View();
         }
     }
