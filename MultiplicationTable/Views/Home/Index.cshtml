@@ -1,1 +1,13 @@
 ﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+@{
+int[,] table = ViewBag.Table;
+}
+<table>
+	@for(int i = 0; i < table.GetLength(0); i++) {
+	    <tr>
+		    @for(int j = 0; j < table.GetLength(1); j++) {
+                <td>@table[i, j]</td>
+            }
+	    </tr>
+	}
+</table>

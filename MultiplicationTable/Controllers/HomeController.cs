@@ -4,19 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using MultiplicationTable.Models;
+using System.Web.Routing;
 
 namespace MultiplicationTable.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public enum MatrixBase { Decimal = 1, Binary, Hexadecimal };
+
+        public ActionResult Index(string matrix_size = "10", string matrix_base = "Decimal")
         {
-            var mvcName = typeof(Controller).Assembly.GetName();
-            var isMono = Type.GetType("Mono.Runtime") != null;
-
-            ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            ViewData["Runtime"] = isMono ? "Mono" : ".NET";
-
+            int matrixSize = int.Parse(matrix_size);
+            TableGenerator tableGenerator = new TableGenerator();
+            int[,] table = tableGenerator.GetTable(matrixSize);
+            ViewBag.Table = table;
             return View();
         }
     }

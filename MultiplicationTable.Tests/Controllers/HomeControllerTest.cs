@@ -6,6 +6,7 @@ using System.Text;
 using System.Web.Mvc;
 using MultiplicationTable;
 using MultiplicationTable.Controllers;
+using static MultiplicationTable.Controllers.HomeController;
 
 namespace MultiplicationTable.Tests.Controllers
 {
@@ -13,23 +14,17 @@ namespace MultiplicationTable.Tests.Controllers
     public class HomeControllerTest
     {
         [Test]
-        public void Index()
+        public void IndexTakesMatrixSizeAndMatrixBaseToReturnAProperTable()
         {
             // Arrange
             var controller = new HomeController();
 
             // Act
-            var result = (ViewResult)controller.Index();
-
-            var mvcName = typeof(Controller).Assembly.GetName();
-            var isMono = Type.GetType("Mono.Runtime") != null;
-
-            var expectedVersion = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            var expectedRuntime = isMono ? "Mono" : ".NET";
+            var result = (ViewResult)controller.Index(8, MatrixBase.Decimal);
 
             // Assert
-            Assert.AreEqual(expectedVersion, result.ViewData["Version"]);
-            Assert.AreEqual(expectedRuntime, result.ViewData["Runtime"]);
+            int[,] table = result.ViewBag.Table;
+            Assert.AreEqual(4, table[1, 1]);
         }
     }
 }
