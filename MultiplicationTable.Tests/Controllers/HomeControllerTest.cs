@@ -20,7 +20,7 @@ namespace MultiplicationTable.Tests.Controllers
             var controller = new HomeController();
 
             // Act
-            var result = (ViewResult)controller.Index(8, MatrixBase.Decimal);
+            var result = (ViewResult)controller.Index("8", "Decimal");
 
             // Assert
             int[,] table = result.ViewBag.Table;
