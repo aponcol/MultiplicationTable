@@ -92,6 +92,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\css\starter-template.css" />
   </ItemGroup>
   <ItemGroup>
     <None Include="global.json" />

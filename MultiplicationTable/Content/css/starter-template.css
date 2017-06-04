@@ -1,20 +1,17 @@
-body {
-  padding-top: 50px;
-}
 .starter-template {
-  padding: 40px 15px;
+  padding: 10px 15px;
   text-align: center;
 }
 table {
     margin: auto;
 }
-td *, td *:hover {
+td, td:hover {
     cursor: default;
     text-decoration: none;
 }
 form {
     max-width: 300px;
-    margin: auto auto 20px auto;
+    margin: auto auto 40px auto;
 }
 form .slider {
     margin-top: 10px;

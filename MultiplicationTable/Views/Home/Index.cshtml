@@ -37,10 +37,6 @@
 
   <body data-feedly-mini="yes">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container"></div>
-    </nav>
-
     <div class="container">
 
       <div class="starter-template">
@@ -91,10 +87,8 @@
 									tableValue = String.Format("{0:X}", table[i - 1, j - 1]);
 								}
 								
-								<td class="@cellClassActive">
-									<a title="@tooltipText" data-toggle="tooltip">
-										@tableValue
-									</a>
+								<td class="@cellClassActive" title="@tooltipText" data-toggle="tooltip">
+									@tableValue
 								</td>
 							}
 						}
